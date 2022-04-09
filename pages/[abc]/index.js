@@ -28,7 +28,7 @@ export async function getStaticPaths() {
 	//1 include only 1//toArray convert object to array
 
 	return {
-		fallback: false,
+		fallback: 'blocking',
 		paths: documentsofArray.map((a) => ({ params: { abc: a._id.toString() } }))
 
 		// paths: [{ params: { abc: 'm1' } }, { params: { abc: 'm2' } }]
